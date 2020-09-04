@@ -44,7 +44,7 @@ class _LogoState extends State<Logo> {
                           child: Text(
                             'Swatchta ',
                             style: TextStyle(
-                              color:Colors.lightBlue[500],
+                              color:Colors.black,
                               fontSize: 47.0,
                               fontWeight: FontWeight.w900,
                             ),
@@ -72,33 +72,33 @@ class _LogoState extends State<Logo> {
               SizedBox(
                 height: 5.0,
               ),
-                  Row(
-                    children: <Widget>[
-                      Padding(
-                        padding: EdgeInsets.symmetric(vertical:5.0,horizontal:10.0 ),
-                        child: SizedBox(
-                          width: 150.0,
-                          height: 150.0,
-                          child: RaisedButton(
-                            elevation:10.0,
-                            color:Colors.white,
+              Row(
+                  children: <Widget>[
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical:5.0,horizontal:10.0 ),
+                      child: SizedBox(
+                        width: 150.0,
+                        height: 150.0,
+                        child: RaisedButton(
+                          elevation:10.0,
+                          color:Colors.white,
 //                          MaterialTapTargetSize materialTapTargetSize,
-                            child: new Column(
-                              children: <Widget>[
-                                Image.asset("images/user_black.png"),
-                                Text("EMPLOYEE", style: TextStyle(
-                                  fontSize: 20.0,
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.w500,
-                                ),),
-                              ],
-                            ),
-                            onPressed: (){
-                              Navigator.pushNamed(context, "/LogIn");
-                            },
+                          child: new Column(
+                            children: <Widget>[
+                              Image.asset("images/user_black.png"),
+                              Text("EMPLOYEE", style: TextStyle(
+                                fontSize: 20.0,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500,
+                              ),),
+                            ],
                           ),
+                          onPressed: (){
+                            Navigator.pushNamed(context, "/LogIn");
+                          },
                         ),
                       ),
+                    ),
 
 //                      Padding(
 //                        padding: EdgeInsets.symmetric(vertical:10.0,horizontal:10.0 ),
@@ -131,33 +131,33 @@ class _LogoState extends State<Logo> {
 //                        ),
 //                        ),
 
-                      Padding(
-                        padding: EdgeInsets.symmetric(vertical:5.0,horizontal:10.0 ),
-                        child: SizedBox(
-                          width: 150.0,
-                          height: 150.0,
-                          child: RaisedButton(
-                            elevation:10.0,
-                            color:Colors.white,
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical:5.0,horizontal:10.0 ),
+                      child: SizedBox(
+                        width: 150.0,
+                        height: 150.0,
+                        child: RaisedButton(
+                          elevation:10.0,
+                          color:Colors.white,
 //                          MaterialTapTargetSize materialTapTargetSize,
-                            child: new Column(
-                              children: <Widget>[
-                                Image.asset("images/user_black.png"),
-                                Text("USER", style: TextStyle(
-                                  fontSize: 20.0,
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.w500,
-                                ),),
-                              ],
-                            ),
-                            onPressed: (){
-                              print('You tapped on RaisedButton');
-                            },
+                          child: new Column(
+                            children: <Widget>[
+                              Image.asset("images/user_black.png"),
+                              Text("USER", style: TextStyle(
+                                fontSize: 20.0,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500,
+                              ),),
+                            ],
                           ),
+                          onPressed: (){
+                            Navigator.pushNamed(context, '/UserMapList');
+                          },
                         ),
                       ),
+                    ),
 
-                    ]),
+                  ]),
               SizedBox(
                 height: 30.0,
               ),
@@ -171,14 +171,14 @@ class _LogoState extends State<Logo> {
                   ),
                 ),
               ),
-                    ],
-                  ),
+            ],
+          ),
 
 
         ),
 
-              ),
-        );
+      ),
+    );
 
 //          ),
 //        );

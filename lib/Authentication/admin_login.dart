@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:async';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutterappp/Home/admin_homescreen.dart';
 
@@ -12,7 +11,6 @@ class LogIn extends StatefulWidget {
 
 class _LogInState extends State<LogIn> {
   final _formkey = GlobalKey<FormState>();
-  // bool isAuth = false;
 
   String _userId;
   String _password;
@@ -26,20 +24,18 @@ class _LogInState extends State<LogIn> {
   }
 
   @override
-  /* void initState() {
-    getadmins();
-    super.initState();
-  }*/
-
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Center(
-        child: Text(
-          'Swatchta',
-          style: Theme.of(context).textTheme.title,
+        automaticallyImplyLeading: false,
+        title: Center(
+          child: Text(
+            'Swatchta',
+            // ignore: deprecated_member_use
+            style: Theme.of(context).textTheme.title,
+          ),
         ),
-      )),
+      ),
       body: Stack(
         children: <Widget>[_showId(), _showPassword(), _showButton()],
       ),
@@ -55,6 +51,7 @@ class _LogInState extends State<LogIn> {
           decoration: InputDecoration(
               //hintText: 'Enter Id',
               labelText: 'User Id',
+              // ignore: deprecated_member_use
               labelStyle: Theme.of(context).textTheme.display1,
               contentPadding: EdgeInsets.all(10.0),
               prefixIcon: Icon(
@@ -77,6 +74,7 @@ class _LogInState extends State<LogIn> {
         decoration: InputDecoration(
           //hintText: 'Enter Password',
           labelText: 'Password',
+          // ignore: deprecated_member_use
           labelStyle: Theme.of(context).textTheme.display1,
           contentPadding: EdgeInsets.all(10.0),
           prefixIcon: Icon(
@@ -115,6 +113,7 @@ class _LogInState extends State<LogIn> {
           elevation: 5.0,
           child: Text(
             'Login',
+            // ignore: deprecated_member_use
             style: Theme.of(context).textTheme.headline,
           ),
         ),
@@ -130,10 +129,11 @@ class _LogInState extends State<LogIn> {
 
     snapshot.documents.forEach((doc) {
       if (doc.exists) {
+        print(_userId);
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => HomeAdmin(),
+            builder: (context) => HomeAdmin(adminid: _userId),
           ),
         );
       }

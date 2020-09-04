@@ -18,6 +18,11 @@ ThemeData userTheme() {
           fontSize: 18.0,
           color: Colors.black,
         ),
+        display2: base.headline.copyWith(
+          fontSize: 14.0,
+          color: Colors.black,
+          fontWeight: FontWeight.w500,
+        )
     );
   }
   ButtonBarThemeData buttontheme(){
