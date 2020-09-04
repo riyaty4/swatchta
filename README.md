@@ -1,4 +1,4 @@
-# flutterappp
+# Swatchta
 
 A new Flutter application.
 
